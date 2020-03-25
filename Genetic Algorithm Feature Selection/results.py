@@ -7,6 +7,5 @@ Created on Tue Mar 24 13:02:15 2020
 from pickle import load
 
 with open('Best_Fit_Scores.txt', 'w') as file:
-    for i in range(10):
-        historic = load(open('GA_Models/Historic.sav', 'rb'))
-        file.write(str(historic.best_fit_score)[1:-1] + '\n')
+    historic = load(open('GA_Models/Historic.sav', 'rb'))
+    file.write(str(historic.best_fit_score)[1:-1] + '\n')
